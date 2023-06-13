@@ -1,13 +1,75 @@
-// Functions
+// Classes
+
+class Microphone {
+
+  // Instance variable or member variables
+  String name = "";
+  String color = "";
+  int model = 4567;
+
+  // Constructor
+  Microphone(this.name, this.color, this.model);
+
+  String get getName => name; // getter
+  set setName(String value) => name = value; // setter
+
+
+
+  // Methods
+  void turnOn() {
+    print("$name is On!");
+  }
+
+  bool isOn() => true;
+
+  int modelNumber() => model;
+
+  void turnOff() {
+    print("$name is turned Off!");
+  }
+
+  void setVolume() {
+    print("$name with color $color volume is Up!");
+  }
+
+}
 
 void main() {
+
+  var mic = Microphone("Blue yeti", "Silver gray", 1345); // we are creating the actual object
+
+  mic.setName = "NewName";
+
+  print(mic.getName);
+
+
+
+
+
+
+
+  // mic.name = "Blue Yeti";
+  // mic.color = "Silver Gray";
+  // mic.model = 1345;
+
+  // mic.turnOn();
+  // mic.setVolume();
+  // mic.turnOff();
+  //
+  // print(mic.isOn());
+  // print(mic.modelNumber());
+
+  // print("${mic.name} ${mic.color}");
+
   // var name = showName();
   // print(name); // or
   // print(' Hello ${showName()}  ${showAge()}');
   // print("Is it really true? ${isKnown()}");
-
-  print(sayHello("David", "Manzi", 23));
+  // print(sayHello("David", "Manzi", 23));
 }
+
+
+
 
 String sayHello(String name, String lastName, int age) => "Hello $name $lastName $age Years old";
 
@@ -39,7 +101,7 @@ int showAge() {
 //   print('Hello Elvis');
 //   var name = 'Elvis';
 //   if(name.contains('o')) {
-//     print('Yess!');
+//     print('Yes!');
 //   } else {
 //     print('Noo!');
 //   }
