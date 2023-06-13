@@ -1,3 +1,43 @@
+// inheritance class
+
+class Person {
+  String name = "", lastName = "", nationality = "";
+  int age = 25;
+
+  void showName() {
+    print(name);
+  }
+
+  void sayHello() {
+    print("Hello!");
+  }
+
+  void showNationality() {
+    print("American");
+  }
+}
+
+class Bonni extends Person {
+  String profession = "";
+
+  void showProfession() => print(profession);
+}
+
+class Paulo extends Person {
+
+  @override
+  void sayHello() {
+    print("Ola");
+  }
+  
+  @override
+  void showNationality() {
+    print("African Mozambican");
+  }
+}
+
+
+
 // Classes
 
 class Microphone {
@@ -35,6 +75,18 @@ class Microphone {
 }
 
 void main() {
+
+  var bonni = Bonni();
+  bonni.name = "Bonni";
+  bonni.showName();
+  bonni.sayHello();
+  bonni.showNationality();
+  bonni.profession = "Dancer";
+  bonni.showProfession();
+
+  var paulo = Paulo();
+  paulo.sayHello();
+  paulo.showNationality();
 
   var mic = Microphone("Blue yeti", "Silver gray", 1345); // we are creating the actual object
 
